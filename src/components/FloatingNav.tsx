@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Home, Info, Flame, MapPin, Users } from "lucide-react";
+import { Home, Info, Flame, MapPin, Users, Calendar } from "lucide-react";
 
 const navItems = [
   { icon: Home, label: "Início", href: "#inicio" },
   { icon: Info, label: "Sobre", href: "#sobre" },
+  { icon: Calendar, label: "Agenda", href: "#agenda" },
   { icon: Flame, label: "Mudança de Vida", href: "#mudanca" },
   { icon: Users, label: "Comunidade", href: "#comunidade" },
   { icon: MapPin, label: "Localização", href: "#localizacao" },
@@ -15,9 +16,9 @@ export const FloatingNav = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+      className="fixed bottom-6 left-0 right-0 z-50 flex justify-center pointer-events-none"
     >
-      <div className="flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-3 sm:py-4 rounded-full bg-card/90 backdrop-blur-md border border-border shadow-elegant">
+      <div className="flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-3 sm:py-4 rounded-full bg-card/95 backdrop-blur-md border border-border shadow-elegant pointer-events-auto">
         {navItems.map((item, index) => (
           <motion.a
             key={item.label}

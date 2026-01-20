@@ -29,18 +29,22 @@ export const ImageCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.div
           key={currentIndex}
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full"
+        >
+          <img
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
       </AnimatePresence>
 
       {/* Carousel indicators */}
