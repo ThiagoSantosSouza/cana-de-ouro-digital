@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { Home, Info, Flame, MapPin, Users, Calendar } from "lucide-react";
+import { Home, Info, Flame, MapPin, Users, Calendar, MessageSquare, Star } from "lucide-react";
 
 const navItems = [
   { icon: Home, label: "Início", href: "#inicio" },
   { icon: Info, label: "Sobre", href: "#sobre" },
   { icon: Calendar, label: "Agenda", href: "#agenda" },
-  { icon: Flame, label: "Mudança de Vida", href: "#mudanca" },
+  { icon: Flame, label: "Mudança", href: "#mudanca" },
+  { icon: Star, label: "Testemunhos", href: "#testemunhos" },
   { icon: Users, label: "Comunidade", href: "#comunidade" },
-  { icon: MapPin, label: "Localização", href: "#localizacao" },
+  { icon: MessageSquare, label: "Contato", href: "#contato" },
+  { icon: MapPin, label: "Local", href: "#localizacao" },
 ];
 
 export const FloatingNav = () => {
